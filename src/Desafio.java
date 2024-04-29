@@ -63,7 +63,7 @@ public class Desafio {
         int[][] matriz = new int[linha][coluna];
         for (int x = 0; x < matriz.length; x++) {
             for (int y = 0; y < matriz[x].length; y++) {
-                matriz[x][y] = (int) Math.floor(Math.random() * (-9 - 9 + 1)) + 9;
+                matriz[x][y] = (int)(Math.random() * (-9 - 9 + 1)) + 9;
 
             }
         }
@@ -77,7 +77,7 @@ public class Desafio {
 
         for (int x = 0; x < matriz.length; x++) {
             for (int y = 0; y < matriz[x].length; y++) {
-                System.out.printf("%2d", matriz[x][y]);
+                System.out.printf("%3d", matriz[x][y]);
             }
             System.out.println();
         }
@@ -108,7 +108,7 @@ public class Desafio {
 
             }
         }
-        System.out.printf("soma dos elementos das linhas pares: %d", somaP);
+        System.out.printf("soma dos elementos das linhas pares: %d\n", somaP);
     }
 
     public static void somaColunaImparesMatriz(int[][] matriz) {
@@ -117,12 +117,12 @@ public class Desafio {
         */
         int somai = 0; // guarda a soma de todos os elementos das colunas impares
 
-        for (int y = 0; y < matriz.length; y += 2) { //você começa repetindo sobre as colunas 'y' dessa vez
-            for (int x = 0; x < matriz[y].length; x++) {
+        for (int x = 0; x < matriz.length; x ++) {
+            for (int y = 0; y < matriz[x].length; y += 2) {
                 somai += matriz[x][y];
             }
         }
-        System.out.printf("soma dos elementos das colunas impares: %d", somai);
+        System.out.printf("soma dos elementos das colunas impares: %d\n", somai);
     }
 
     public static void somaDaDiagonalPrincipalMatriz(int[][] matriz) {
@@ -134,7 +134,7 @@ public class Desafio {
         for (int z = 0; z < matriz.length; z++) {
             somaD += matriz[z][z];
         }
-        System.out.printf("soma dos elementos da diagonal principal: %d", somaD);
+        System.out.printf("soma dos elementos da diagonal principal: %d\n", somaD);
     }
 
     public static void aMediaDeTodosOsElementosDaMatriz(int[][] matriz) {
@@ -150,7 +150,7 @@ public class Desafio {
         }
 
         double mediaM = (double) somaM / 25;// mediaM guarda o valor do calculo, sendo a média da matriz
-        System.out.printf("A média de todos os elementos da matriz: %.2f", mediaM);
+        System.out.printf("A média de todos os elementos da matriz: %.2f\n", mediaM);
     }
 
     public static void aQuantidadeDeElementosNegativosDaMatriz(int[][] matriz) {
@@ -167,7 +167,7 @@ public class Desafio {
                 }
             }
         }
-        System.out.printf("A quantidade de elementos negativos da matriz: %d", quantidadeN);
+        System.out.printf("A quantidade de elementos negativos da matriz: %d\n", quantidadeN);
     }
 
     public static void multiplicaDiagonalPrincipalPelaMediaDaDiagonalSecundaria(int[][] matriz) {
@@ -194,8 +194,8 @@ public class Desafio {
             da multiplicação*/
         }
 
-        System.out.print("Multiplicação dos elementos da diagonal principal com a média dos elementos da " +
-                "diagonal secundária: ");
+        System.out.println("Multiplicação dos elementos da diagonal principal com a média dos elementos da " +
+                "diagonal secundária:\n");
 
         /*Laço de repetição criado para repetir todos os elementos da diagonal principal a ser multiplicado pela média
         da diagonal secundária, junto do IF para limpeza visual das vírgulas quando não necessário, pois a média pode
